@@ -4,7 +4,6 @@ namespace ph4r05\LaravelDatabasePh4\Queue;
 
 use Illuminate\Contracts\Queue\Queue as QueueContract;
 use Illuminate\Database\Connection;
-use Illuminate\Database\DetectsDeadlocks;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Queue\DatabaseQueue;
 use Illuminate\Queue\Jobs\DatabaseJob;
@@ -13,8 +12,6 @@ use Illuminate\Support\Collection;
 
 class OptimisticDatabaseQueue extends DatabaseQueue implements QueueContract, Ph4DatabaseInterface
 {
-    use DetectsDeadlocks;
-
     /**
      * Job fetch strategy.
      *
